@@ -1,0 +1,17 @@
+k = 1
+if k >=1:
+ for i in range (k):
+   num = int(input(f"enter a number you want to check ="))
+   sum_value = 0
+   original = num
+   num_digit = len(str(num))
+
+   while num > 0:
+    last_digit = num % 10
+    sum_value += last_digit  ** num_digit
+    num = num //10
+
+if sum_value == original :
+  print ("Armstrong")
+else :
+  print ("Not a armstrong")
