@@ -1,0 +1,10 @@
+from collections import Counter
+string = input("Enter any sentence : ")
+def vowel_count (phrase):
+  vowels = "aeiou"
+  remove = ''.join(char.lower() for char in phrase if char.isalpha())
+  counts = Counter(char for char in remove if char in vowels)
+
+  for v in vowels:
+        print(f"{v}: {counts.get(v, 0)}")
+vowel_count(string)
