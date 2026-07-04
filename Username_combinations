@@ -1,0 +1,15 @@
+from itertools import product 
+
+def user_name(word):
+ return [word, word.capitalize(), word.upper()]
+
+names = ['john']
+adms = ['admin' ]
+seprators = [ '_', ' - ',  ' . ']
+
+with open ('usernames.txt', 'w') as f:
+    for n , r , s  in product (names, adms, seprators):
+        for nv, rv in product (user_name(n), user_name(r)):
+         print (f"{nv}{s}{rv}\n")
+         f.write (f"{nv}{s}{rv}\n")
+
